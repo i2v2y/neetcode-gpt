@@ -19,6 +19,6 @@ class Solution:
         dl_dw = (y_hat - y_true) * y_hat * (1 - y_hat) * x
         dl_db = (y_hat - y_true) * y_hat * (1 - y_hat)
 
-        return (np.round(dl_dw, 5), np.round(dl_db, 5))
+        return np.round(dl_dw, 5), np.round(dl_db, 5)
 
 
