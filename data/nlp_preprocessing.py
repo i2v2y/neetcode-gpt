@@ -13,5 +13,4 @@ class Solution:
         vocabulary = sorted(set([w for s in tokenized for w in s]))
         encoder = {w: i+1 for i, w in enumerate(vocabulary)}
         encoded = [torch.tensor([encoder[w] for w in s]) for s in tokenized]
-        print(encoded)
         return nn.utils.rnn.pad_sequence(encoded, batch_first=True)        
