@@ -21,7 +21,6 @@ class Solution:
             
             logits = model(x)
             loss = F.cross_entropy(logits.reshape([-1, logits.shape[-1]]), y.flatten())
-            print(logits.shape, logits.reshape([-1, logits.shape[-1]]).shape, y.flatten().shape)
 
             optimizer.zero_grad()
             loss.backward()
