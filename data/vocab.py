@@ -8,9 +8,11 @@ class Solution:
         chars = sorted(set(text))
         itos = {}
         stoi = {}
+        
         for i, s in enumerate(chars):
             itos[i] = s
             stoi[s] = i
+
         return stoi, itos
 
     def encode(self, text: str, stoi: Dict[str, int]) -> List[int]:
